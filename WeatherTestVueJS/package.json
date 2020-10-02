@@ -1,0 +1,23 @@
+{
+  "name": "weather-test-vue-js",
+  "version": "1.0.0",
+  "description": "Weather Test .Net Core with Vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Bolanos",
+  "license": "ISC",
+  "devDependencies": {
+    "aspnet-webpack": "^3.0.0",
+    "css-loader": "^4.3.0",
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
+  }
+}
