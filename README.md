@@ -36,4 +36,4 @@ Date       Avg Temp(F)
 
 
 # Version 1:
-[https://imgur.com/a/wFaB6Mo](https://imgur.com/a/wFaB6Mo)
+![demo](https://i.imgur.com/Z2DSwJL.gif)
