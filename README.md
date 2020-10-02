@@ -1,3 +1,11 @@
+# Version History
+### Version 1
+- Implement basic requirements
+- Create BackEnd using C# .Net Core / EF
+- Separate all classes into different files
+- Implement MediatR
+- Basic HTML implementation with `wwwroot` folder to inject VueJS. 
+
 # WeatherMap
 Weather App - Created on C# API REST / Entity Framework / .Net Core
 
