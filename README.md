@@ -1,5 +1,6 @@
 # WeatherMap
 Weather App - Created on C# API REST / Entity Framework / .Net Core
+
 The display is using VueJS
 
 Using the API provided at [http://openweathermap.org](http://openweathermap.org), write a C# program that determines the average daily temperature (in Fahrenheit, rounded to 2 decimal places), for the next 5 days in each of the following locations:
