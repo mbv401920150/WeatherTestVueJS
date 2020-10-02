@@ -10,6 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using MediatR;
+using VueCliMiddleware;
+using Microsoft.AspNetCore.SpaServices;
+using WeatherTestVueJS.Logic;
 
 namespace WeatherTestVueJS
 {
@@ -25,11 +28,12 @@ namespace WeatherTestVueJS
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSpaStaticFiles(opt => opt.RootPath = "client-app/dist");
             services.AddCors(options =>
             {
                 options.AddPolicy(name: "LocalHost", builder => builder.WithOrigins("http://localhost:53465"));
             });
-            services.AddMediatR(typeof(BookNew.HandlerBookNew).Assembly);
+            services.AddMediatR(typeof(GetWeatherForecast.Handler).Assembly);
             services.AddControllers();
         }
 
@@ -40,16 +44,27 @@ namespace WeatherTestVueJS
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
+
+            app.UseSpaStaticFiles();
             app.UseRouting();
-            app.UseCors("LocalHost");
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+
+                endpoints.MapToVueCliProxy(
+                    "{*path}",
+                    new SpaOptions() { SourcePath = "client-app" },
+                    npmScript: (System.Diagnostics.Debugger.IsAttached) ? "serve" : null,
+                    regex: "Compiled successfully",
+                    forceKill: true
+                    );
             });
+
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+            app.UseCors("LocalHost");
+            // app.UseAuthorization();
         }
     }
 }
