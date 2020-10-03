@@ -124,9 +124,9 @@ Date       Avg Temp(F)
 
 ## Version 5:
 
-### Check average temp / custom location vs Weather WebSite
-
 <details>
+  
+## Check average temp / custom location vs Weather WebSite
   
 ### Intro
 The calculation of the WebApi match with external [Weather Forecast](https://weather.com/weather/tenday/l/Heredia+Heredia+Costa+Rica?canonicalCityId=f100ca8c60d480d1dad0edf84f5d37b2732e16ab7cbccebbf9b628559710fd63)
