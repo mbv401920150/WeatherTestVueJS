@@ -42,7 +42,7 @@ Date       Avg Temp(F)
 
 # Version History
 
-### Version 5
+## Version 5
 
 <details>
   
@@ -57,9 +57,21 @@ General:
 Fixes:
 - Fix the `Fragment` warning, it's was required declare the Fragment element un lowercase => <fragment></fragment>
 
+## Check average temp / custom location vs Weather WebSite
+  
+### Intro
+The calculation of the WebApi match with external [Weather Forecast](https://weather.com/weather/tenday/l/Heredia+Heredia+Costa+Rica?canonicalCityId=f100ca8c60d480d1dad0edf84f5d37b2732e16ab7cbccebbf9b628559710fd63)
+
+### Explanation
+![double-check](https://i.imgur.com/OzyfUYe.png)
+
+### Demo:
+
+![demo-calculations](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d54fa229-f929-4505-88b6-65004cca987f/Demo_Calculations.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201003%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201003T221445Z&X-Amz-Expires=86400&X-Amz-Signature=cfe0fd5ef60d94921122872a362ef4c235fdf0acae296c9fd3c7cb988f206158&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Demo_Calculations.gif%22)
+
 </details>
 
-### Version 4
+## Version 4
 
 <details>
   
@@ -71,9 +83,13 @@ New features in the FrontEnd:
 - Allow delete items from the list
 - Sort forecast results
 
+### Demo:
+
+![ver4](https://i.imgur.com/YkrD0yC.gif)
+
 </details>
 
-### Version 3
+## Version 3
 
 <details>
   
@@ -98,9 +114,13 @@ General:
 - Change general Icon located in the Browser's tab.
 - Include a header into the app with a logo.
 
+### Demo:
+
+![ver3](https://i.imgur.com/EQKWPvb.gif)
+
 </details>
 
-### Version 2
+## Version 2
 
 <details>
   
@@ -108,7 +128,7 @@ General:
 
 </details>
 
-### Version 1
+## Version 1
 
 <details>
   
@@ -118,49 +138,8 @@ General:
 - Implement MediatR
 - Basic HTML implementation with `wwwroot` folder to inject VueJS. 
 
-</details>
+### Demo:
 
-# Interface evolution
-
-## Version 5:
-
-<details>
-  
-## Check average temp / custom location vs Weather WebSite
-  
-### Intro
-The calculation of the WebApi match with external [Weather Forecast](https://weather.com/weather/tenday/l/Heredia+Heredia+Costa+Rica?canonicalCityId=f100ca8c60d480d1dad0edf84f5d37b2732e16ab7cbccebbf9b628559710fd63)
-
-### Explanation
-![double-check](https://i.imgur.com/OzyfUYe.png)
-
-### Full demo:
-![demo-calculations](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d54fa229-f929-4505-88b6-65004cca987f/Demo_Calculations.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201003%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201003T221445Z&X-Amz-Expires=86400&X-Amz-Signature=cfe0fd5ef60d94921122872a362ef4c235fdf0acae296c9fd3c7cb988f206158&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Demo_Calculations.gif%22)
-
-</details>
-
-## Version 4:
-
-<details>
-  
-![ver4](https://i.imgur.com/YkrD0yC.gif)
-
-</details>
-
-## Version 3:
-
-<details>
-  
-![ver3](https://i.imgur.com/EQKWPvb.gif)
-
-</details>
-
-## Version 2:
-No interface changes
-
-## Version 1:
-<details>
-  
 ![ver1](https://i.imgur.com/Z2DSwJL.gif)
 
 </details>
