@@ -91,3 +91,8 @@ No interface changes
 
 ## Version 1:
 ![ver1](https://i.imgur.com/Z2DSwJL.gif)
+
+---
+
+# Check average temp (Custom location):
+![double-check](https://i.imgur.com/OzyfUYe.png)
