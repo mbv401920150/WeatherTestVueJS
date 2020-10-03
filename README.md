@@ -45,7 +45,7 @@ General:
 
 ### Version 1
 
-</details>
+<details>
 - Implement basic requirements
 - Create BackEnd using C# .Net Core / EF
 - Separate all classes into different files
@@ -94,6 +94,22 @@ Date       Avg Temp(F)
 
 # Interface evolution
 
+## Version 5:
+
+### Check average temp / custom location vs Weather WebSite
+<details>
+  
+### Intro
+The calculation of the WebApi match with external [Weather Forecast](https://weather.com/weather/tenday/l/Heredia+Heredia+Costa+Rica?canonicalCityId=f100ca8c60d480d1dad0edf84f5d37b2732e16ab7cbccebbf9b628559710fd63)
+
+### Explanation
+![double-check](https://i.imgur.com/OzyfUYe.png)
+
+### Full demo:
+![demo-calculations](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d54fa229-f929-4505-88b6-65004cca987f/Demo_Calculations.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201003%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201003T221445Z&X-Amz-Expires=86400&X-Amz-Signature=cfe0fd5ef60d94921122872a362ef4c235fdf0acae296c9fd3c7cb988f206158&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Demo_Calculations.gif%22)
+</details>
+
+
 ## Version 4:
 <details>
   
@@ -116,19 +132,4 @@ No interface changes
   
 ![ver1](https://i.imgur.com/Z2DSwJL.gif)
 
-</details>
-
----
-
-# Check average temp / custom location vs Weather WebSite
-<details>
-  
-## Intro
-The calculation of the WebApi match with external [Weather Forecast](https://weather.com/weather/tenday/l/Heredia+Heredia+Costa+Rica?canonicalCityId=f100ca8c60d480d1dad0edf84f5d37b2732e16ab7cbccebbf9b628559710fd63)
-
-### Explanation
-![double-check](https://i.imgur.com/OzyfUYe.png)
-
-### Full demo:
-![demo-calculations](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d54fa229-f929-4505-88b6-65004cca987f/Demo_Calculations.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201003%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201003T221445Z&X-Amz-Expires=86400&X-Amz-Signature=cfe0fd5ef60d94921122872a362ef4c235fdf0acae296c9fd3c7cb988f206158&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Demo_Calculations.gif%22)
 </details>
