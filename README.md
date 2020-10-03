@@ -70,8 +70,11 @@ Date       Avg Temp(F)
 
 # Interface evolution
 
-## Verion 3:
+## Version 3:
 ![ver3](https://i.imgur.com/EQKWPvb.gif)
+
+## Version 2:
+No interface changes
 
 ## Version 1:
 ![ver1](https://i.imgur.com/Z2DSwJL.gif)
