@@ -1,5 +1,22 @@
 # Version History
 
+### Version 5
+
+<details>
+  
+NPM Packages: 
+- `sass` and `sass-loader`: Used to implement SASS/SCSS into the style of the components
+
+General:
+- Improve styles, using only `display: flex` to arrange the items in the interface
+- Added total items in the forecast search (In the header)
+- Added a new message when the forecast list is blank
+
+Fixes:
+- Fix the `Fragment` warning, it's was required declare the Fragment element un lowercase => <fragment></fragment>
+
+</details>
+
 ### Version 4
 
 <details>
