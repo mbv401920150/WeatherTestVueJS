@@ -37,7 +37,7 @@
         <input type="submit" />
       </section>
     </form>
-    <ListForecast v-if="forecast.length > 0" :ForecastList="forecast" />
+    <ListForecast v-if="forecastList.length > 0" />
   </Fragment>
 </template>
 
@@ -51,9 +51,12 @@ export default {
     newLocation: "",
     zipCode: "",
     showError: false,
-    forecast: [],
   }),
-  computed: {},
+  computed: {
+    forecastList() {
+      return this.$store.state.forecasts;
+    },
+  },
   methods: {
     removeError() {
       if (this.newLocation !== "") this.showError = false;
@@ -67,7 +70,7 @@ export default {
       }
 
       ForecastWeather.get(this.newLocation).then(({ data }) =>
-        this.forecast.push({ ...data })
+        this.$store.commit("addForecast", { ...data })
       );
 
       this.newLocation = "";

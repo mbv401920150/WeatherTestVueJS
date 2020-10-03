@@ -2,7 +2,7 @@
   <Fragment>
     <div class="title">
       {{ forecast.location }} ({{ forecast.id }})
-      <button class="btnDelete" @click="removeElement(index)">X</button>
+      <button class="btnDelete" @click="removeElement()">X</button>
     </div>
     <div class="flex-grid tableHeader">
       <div>Date</div>
@@ -23,6 +23,11 @@
 export default {
   name: "Forecast",
   props: ["forecast"],
+  methods: {
+    removeElement() {
+      this.$store.commit("removeForecast", this.forecast.location);
+    },
+  },
 };
 </script>
 
