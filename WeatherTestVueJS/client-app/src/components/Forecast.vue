@@ -1,5 +1,5 @@
 <template>
-  <Fragment>
+  <section>
     <div class="title">
       {{ forecast.location }} ({{ forecast.id }})
       <button class="btnDelete" @click="removeElement()">X</button>
@@ -16,7 +16,7 @@
       <div>{{ date.date }} {{ date.chanceOfPrecipitation ? "*" : " " }}</div>
       <div>{{ date.averageTemp }}°</div>
     </div>
-  </Fragment>
+  </section>
 </template>
 
 <script>
@@ -31,7 +31,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
+section {
+  align-self: center;
+  width: 500px;
+  margin-bottom: 25px;
+}
+
 .tableHeader {
   font-weight: bold;
 }
@@ -49,21 +55,22 @@ export default {
 
 .btnDelete {
   margin: 5px 0;
+  font-weight: bold;
   background-color: #dc3545;
   border-color: #ca2939;
+  border-radius: 10px;
   color: white;
-  font-weight: bold;
-}
 
-.btnDelete:hover {
-  background-color: #d02a3a;
+  :hover {
+    background-color: #d02a3a;
+  }
 }
 
 .flex-grid {
   display: flex;
-}
 
-.flex-grid div {
-  flex: 1;
+  div {
+    flex: 1;
+  }
 }
 </style>

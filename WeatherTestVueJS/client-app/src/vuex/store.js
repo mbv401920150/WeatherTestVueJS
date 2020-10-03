@@ -5,6 +5,18 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    defaultLocations: [
+      "Marlboro,MA,US",
+      "San Diego,CA,US",
+      "Cheyenne,WY,US",
+      "Anchorage,AK,US",
+      "Austin,TX,US",
+      "Orlando,FL,US",
+      "Seattle,WA,US",
+      "Cleveland,OH,US",
+      "Portland,ME,US",
+      "Honolulu,HI,US",
+    ],
     forecasts: [],
   },
   mutations: {

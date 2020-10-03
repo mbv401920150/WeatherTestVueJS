@@ -1,5 +1,5 @@
 <template>
-  <Fragment>
+  <fragment>
     <form @submit.prevent="searchLocation">
       <section>
         <h3>Search a new location</h3>
@@ -15,16 +15,9 @@
           @change="removeError"
         />
         <datalist id="list-locations">
-          <option value="Marlboro,MA,US">Marlboro,MA,US</option>
-          <option value="San Diego,CA,US">San Diego,CA,US</option>
-          <option value="Cheyenne,WY,US">Cheyenne,WY,US</option>
-          <option value="Anchorage,AK,US">Anchorage,AK,US</option>
-          <option value="Austin,TX,US">Austin,TX,US</option>
-          <option value="Orlando,FL,US">Orlando,FL,US</option>
-          <option value="Seattle,WA,US">Seattle,WA,US</option>
-          <option value="Cleveland,OH,US">Cleveland,OH,US</option>
-          <option value="Portland,ME,US">Portland,ME,US</option>
-          <option value="Honolulu,HI,US">Honolulu,HI,US</option>
+          <option v-for="loc in getDefaultLocations" :value="loc" :key="loc">
+            {{ loc }}
+          </option>
         </datalist>
 
         <label for="zip-code">Zip code:</label>
@@ -37,13 +30,11 @@
         <input type="submit" />
       </section>
     </form>
-    <ListForecast v-if="forecastList.length > 0" />
-  </Fragment>
+  </fragment>
 </template>
 
 <script>
 import ForecastWeather from "@/services/ForecastWeather.js";
-import ListForecast from "@/components/ListForecast.vue";
 
 export default {
   name: "FormSearch",
@@ -53,8 +44,8 @@ export default {
     showError: false,
   }),
   computed: {
-    forecastList() {
-      return this.$store.state.forecasts;
+    getDefaultLocations() {
+      return this.$store.state.defaultLocations;
     },
   },
   methods: {
@@ -76,13 +67,10 @@ export default {
       this.newLocation = "";
     },
   },
-  components: {
-    ListForecast,
-  },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 form {
   display: flex;
   justify-content: center;
@@ -112,20 +100,16 @@ label {
   font-weight: 500;
 }
 
-datalist {
-  font-size: 40px;
-}
-
 input {
   width: 400px;
   padding: 2px 5px;
+
+  &[type="submit"] {
+    margin-top: 20px;
+  }
 }
 
 .highlight {
   color: tomato;
-}
-
-input[type="submit"] {
-  margin-top: 20px;
 }
 </style>

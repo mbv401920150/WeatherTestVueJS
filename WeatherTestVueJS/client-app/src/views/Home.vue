@@ -1,15 +1,17 @@
 <template>
-  <Fragment>
-    <Logo />
+  <fragment>
+    <HeaderApp />
     <FormSearch />
-  </Fragment>
+    <ListForecast />
+  </fragment>
 </template>
 
 <script>
-import Logo from "@/components/Logo.vue";
+import HeaderApp from "@/components/HeaderApp.vue";
 import FormSearch from "@/components/FormSearch.vue";
+import ListForecast from "@/components/ListForecast.vue";
 
 export default {
-  components: { Logo, FormSearch },
+  components: { HeaderApp, FormSearch, ListForecast },
 };
 </script>
