@@ -1,4 +1,14 @@
 # Version History
+
+### Version 4
+NPM Packages: 
+- `vuex`: Manage a global state
+
+New features in the FrontEnd:
+- Avoid duplicates entries
+- Allow delete items from the list
+- Sort forecast results
+
 ### Version 3
 NPM Packages: 
 - `axios`: AJAX Library to fetch data from localhost
@@ -69,6 +79,9 @@ Date       Avg Temp(F)
 3/12/2017* 11.71 F
 
 # Interface evolution
+
+## Version 4:
+![ver4](https://i.imgur.com/YkrD0yC.gif)
 
 ## Version 3:
 ![ver3](https://i.imgur.com/EQKWPvb.gif)
