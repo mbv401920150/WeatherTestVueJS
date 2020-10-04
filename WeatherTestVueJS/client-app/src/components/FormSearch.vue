@@ -3,31 +3,46 @@
     <form @submit.prevent="searchLocation">
       <section>
         <h3>Search a new location</h3>
-        <label for="new-location" :class="{ highlight: showError }">
-          Location{{ showError ? " (This field is required)" : "" }}:
-        </label>
-        <input
-          id="new-location"
-          list="list-locations"
-          placeholder="Location - Format: (City, City code, Country)"
-          v-model="newLocation"
-          @keydown="removeError"
-          @change="removeError"
-        />
-        <datalist id="list-locations">
-          <option v-for="loc in getDefaultLocations" :value="loc" :key="loc">
-            {{ loc }}
-          </option>
-        </datalist>
+        <div class="oneColumn">
+          <label for="new-location" :class="{ highlight: showError }">
+            Location:
+          </label>
+          <input
+            id="new-location"
+            list="list-locations"
+            placeholder="Location (City, City code, Country)"
+            v-model="newLocation"
+            @keydown="removeError"
+            @change="removeError"
+          />
+          <datalist id="list-locations">
+            <option v-for="loc in getDefaultLocations" :value="loc" :key="loc">
+              {{ loc }}
+            </option>
+          </datalist>
+        </div>
 
-        <label for="zip-code">Zip code:</label>
-        <input
-          id="zip-code"
-          placeholder="ZipCode (Optional)"
-          v-model="zipCode"
-        />
+        <div class="twoColumns">
+          <div>
+            <label for="zip-code">Zip code:</label>
+            <input
+              id="zip-code"
+              placeholder="ZipCode (Optional)"
+              v-model="zipCode"
+            />
+          </div>
 
-        <input type="submit" />
+          <div>
+            <label for="temp-metric">Metric:</label>
+            <select id="temp-metric" v-model="tempUnits">
+              <option value="F">F</option>
+              <option value="C">C</option>
+              <option value="K">K</option>
+            </select>
+          </div>
+        </div>
+
+        <input id="btnSubmit" type="submit" />
       </section>
     </form>
   </fragment>
@@ -41,6 +56,7 @@ export default {
   data: () => ({
     newLocation: "",
     zipCode: "",
+    tempUnits: "F",
     showError: false,
   }),
   computed: {
@@ -60,11 +76,18 @@ export default {
         return;
       }
 
-      ForecastWeather.get(this.newLocation).then(({ data }) =>
-        this.$store.commit("addForecast", { ...data })
-      );
+      const payload = {
+        location: this.newLocation,
+        zipCode: this.zipCode,
+        units: this.tempUnits,
+      };
+
+      ForecastWeather.get(payload)
+        .then(({ data }) => this.$store.commit("addForecast", { ...data }))
+        .catch(() => alert(`Something goes wrong with the request`));
 
       this.newLocation = "";
+      this.zipCode = "";
     },
   },
 };
@@ -82,34 +105,66 @@ section {
   margin: 10px;
   padding: 10px;
   width: 500px;
+  display: flex;
+  flex-direction: column;
 }
 
 h3 {
   border-bottom: 2px solid grey;
   border-radius: 3px;
-}
-
-section {
-  display: grid;
-  justify-content: center;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 label {
-  justify-self: left;
   margin-top: 10px;
   font-weight: 500;
 }
 
-input {
-  width: 400px;
+input,
+select {
+  height: 35px;
   padding: 2px 5px;
-
-  &[type="submit"] {
-    margin-top: 20px;
-  }
 }
 
 .highlight {
   color: tomato;
+
+  &::before {
+    content: "*";
+    position: absolute;
+    transform: translate(-8px, -5px);
+    font-weight: bold;
+  }
+}
+
+.oneColumn {
+  display: flex;
+  align-self: center;
+  align-items: baseline;
+
+  input {
+    margin-left: 10px;
+    width: 274px;
+  }
+}
+
+.twoColumns {
+  display: flex;
+  align-self: center;
+  align-items: baseline;
+
+  #zip-code {
+    margin: 0 10px;
+    width: 160px;
+  }
+
+  #temp-metric {
+    margin-left: 10px;
+  }
+}
+
+#btnSubmit {
+  margin-top: 15px;
 }
 </style>

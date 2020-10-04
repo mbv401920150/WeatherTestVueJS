@@ -22,7 +22,14 @@ namespace WeatherTestVueJS.Controllers
         [HttpGet]
         public async Task<ActionResult<CityWeather>> getForecast([FromQuery] GetWeatherForecast.Request request)
         {
-            return await _mediator.Send(request);
+            try
+            {
+                return await _mediator.Send(request);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

@@ -1,17 +1,20 @@
 <template>
   <section>
     <div class="title">
-      {{ forecast.location }} ({{ forecast.id }})
+      {{ forecast.location }}
+      <div v-if="forecast.zipCode !== ''" class="zipCode">
+        Zip code: {{ forecast.zipCode }}
+      </div>
       <button class="btnDelete" @click="removeElement()">X</button>
     </div>
     <div class="flex-grid tableHeader">
       <div>Date</div>
-      <div>Avg Temp (F)</div>
+      <div>Avg Temp ({{ forecast.units }})</div>
     </div>
     <div
       class="flex-grid"
-      v-for="(date, $index) in forecast.weatherStats"
-      :key="$index"
+      v-for="date in forecast.weatherStats"
+      :key="date.date"
     >
       <div>{{ date.date }} {{ date.chanceOfPrecipitation ? "*" : " " }}</div>
       <div>{{ date.averageTemp }}°</div>
@@ -25,7 +28,7 @@ export default {
   props: ["forecast"],
   methods: {
     removeElement() {
-      this.$store.commit("removeForecast", this.forecast.location);
+      this.$store.commit("removeForecast", this.forecast.id);
     },
   },
 };
@@ -72,5 +75,16 @@ section {
   div {
     flex: 1;
   }
+}
+
+.zipCode {
+  border: 1px solid #c3e6cb;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #155724;
+  background-color: #d4edda;
+  padding: 5px 10px;
+  font-family: monospace;
+  box-shadow: 1px 1px 1px;
 }
 </style>

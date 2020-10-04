@@ -10,13 +10,15 @@ namespace WeatherTestVueJS.Model
     /// </summary>
     public class CityWeather
     {
+        public string Id { get; set; }
         public CityWeather()
         {
             WeatherStats = new List<CityWeatherPerDay>();
         }
 
         public string Location { get; set; }
-        public int Id { get; set; }
+        public string ZipCode { get; set; }
+        public string Units { get; set; }
 
         public List<CityWeatherPerDay> WeatherStats { get; set; }
     }

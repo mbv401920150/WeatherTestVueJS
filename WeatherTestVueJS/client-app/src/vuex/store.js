@@ -21,19 +21,17 @@ export default new Vuex.Store({
   },
   mutations: {
     addForecast(state, newEntry) {
-      const { location } = newEntry;
+      const { id } = newEntry;
 
-      if (state.forecasts.findIndex((x) => x.location === location) >= 0) {
+      if (state.forecasts.findIndex((x) => x.id === id) >= 0) {
         alert("The element already exists");
         return;
       }
 
       state.forecasts.push(newEntry);
     },
-    removeForecast(state, location) {
-      const newForecasts = state.forecasts.filter(
-        (f) => f.location !== location
-      );
+    removeForecast(state, id) {
+      const newForecasts = state.forecasts.filter((f) => f.id !== id);
 
       state.forecasts = newForecasts;
     },

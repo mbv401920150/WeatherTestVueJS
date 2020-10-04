@@ -3,7 +3,9 @@ import Service from "./Service.js";
 const apiPath = "weatherforecast";
 
 export default {
-  get(location) {
-    return Service.get(`${apiPath}?location=${location}`);
+  get({ location, zipCode, units }) {
+    return Service.get(
+      `${apiPath}?location=${location}&units=${units}&zipCode=${zipCode}`
+    );
   },
 };

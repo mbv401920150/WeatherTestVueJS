@@ -11,7 +11,7 @@ namespace WeatherTestVueJS.Model
     public class CityWeatherPerDay
     {
         public string Date { get; set; }
-        public double AverageTemp { get; set; }
+        public string AverageTemp { get; set; }
         public bool ChanceOfPrecipitation { get; set; }
     }
 }

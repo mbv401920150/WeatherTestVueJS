@@ -2,10 +2,10 @@
   <section>
     <div v-if="totalItems > 0">
       <h2>Weather forecast ({{ totalItems }})</h2>
-      <h3 class="tttt" title="Today date">{{ getToday }}</h3>
+
       <Forecast
         v-for="forecast in forecastList"
-        :key="forecast.location"
+        :key="forecast.id"
         :forecast="forecast"
       />
     </div>
@@ -18,12 +18,11 @@
 
 <script>
 import Forecast from "@/components/Forecast";
-import { sortByName, getToday } from "@/helpers/functions";
+import { sortByName } from "@/helpers/functions";
 
 export default {
   name: "ListForecast",
   computed: {
-    getToday: () => getToday(),
     totalItems() {
       return this.$store.state.forecasts.length;
     },
@@ -58,16 +57,6 @@ img {
   width: 100px;
   height: 100px;
   align-self: center;
-}
-
-.tttt {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 1rem;
-  border: 1px solid grey;
-  border-radius: 5px;
-  padding: 5px;
-  cursor: help;
+  margin-bottom: 10px;
 }
 </style>
