@@ -42,6 +42,21 @@ Date       Avg Temp(F)
 
 # Version History
 
+## Version 7
+
+<details>
+  
+New features
+- Include the About section of the project
+- Implement the Vue Router and a menu with two options to navigate.
+- Several changes in the styles
+- Several changes in the code to make it more easier to mantain
+
+### Demo
+![version6](https://raw.githubusercontent.com/mbv401920150/WeatherTestVueJS/master/WeatherTestVueJS/Demos/Version%207.gif)
+
+</details>
+
 ## Version 6
 
 <details>
@@ -71,7 +86,7 @@ Backend changes:
 - Multiples fixes and small other changes.
 
 ### Demo
-![version6](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/724e7ed1-526c-4464-9e95-43c77d09dafb/Version_6.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201004T025016Z&X-Amz-Expires=86400&X-Amz-Signature=174f7c8f2314fa219644b4af366ffcbe8773985be5c05d81f89eba11bf6402b8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Version_6.gif%22)
+![version6](https://raw.githubusercontent.com/mbv401920150/WeatherTestVueJS/master/WeatherTestVueJS/Demos/Version%206.gif)
 
 </details>
 
@@ -96,11 +111,11 @@ Fixes:
 The calculation of the WebApi match with external [Weather Forecast](https://weather.com/weather/tenday/l/Heredia+Heredia+Costa+Rica?canonicalCityId=f100ca8c60d480d1dad0edf84f5d37b2732e16ab7cbccebbf9b628559710fd63)
 
 ### Explanation
-![double-check](https://i.imgur.com/OzyfUYe.png)
+![double-check](https://github.com/mbv401920150/WeatherTestVueJS/blob/master/WeatherTestVueJS/Demos/Version%205%20Calculation.png?raw=true)
 
 ### Demo:
 
-![demo-calculations](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d54fa229-f929-4505-88b6-65004cca987f/Demo_Calculations.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201003%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201003T221445Z&X-Amz-Expires=86400&X-Amz-Signature=cfe0fd5ef60d94921122872a362ef4c235fdf0acae296c9fd3c7cb988f206158&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Demo_Calculations.gif%22)
+![demo-calculations](https://github.com/mbv401920150/WeatherTestVueJS/blob/master/WeatherTestVueJS/Demos/Version%205.gif?raw=true)
 
 </details>
 
@@ -118,7 +133,7 @@ New features in the FrontEnd:
 
 ### Demo:
 
-![ver4](https://i.imgur.com/YkrD0yC.gif)
+![ver4](https://github.com/mbv401920150/WeatherTestVueJS/blob/master/WeatherTestVueJS/Demos/Version%204.gif?raw=true)
 
 </details>
 
@@ -149,7 +164,7 @@ General:
 
 ### Demo:
 
-![ver3](https://i.imgur.com/EQKWPvb.gif)
+![ver3](https://github.com/mbv401920150/WeatherTestVueJS/blob/master/WeatherTestVueJS/Demos/Version%203.gif?raw=true)
 
 </details>
 
@@ -173,6 +188,6 @@ General:
 
 ### Demo:
 
-![ver1](https://i.imgur.com/Z2DSwJL.gif)
+![ver1](https://github.com/mbv401920150/WeatherTestVueJS/blob/master/WeatherTestVueJS/Demos/Version%201.gif?raw=true)
 
 </details>
