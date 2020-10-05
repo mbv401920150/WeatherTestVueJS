@@ -1,6 +1,5 @@
 <template>
   <div>
-    <TodayCard />
     <HeaderApp />
     <FormSearch />
     <ListForecast />
@@ -11,10 +10,9 @@
 import HeaderApp from "@/components/HeaderApp.vue";
 import FormSearch from "@/components/FormSearch.vue";
 import ListForecast from "@/components/ListForecast.vue";
-import TodayCard from "@/components/TodayCard.vue";
 
 export default {
-  components: { HeaderApp, FormSearch, ListForecast, TodayCard },
+  components: { HeaderApp, FormSearch, ListForecast },
 };
 </script>
 

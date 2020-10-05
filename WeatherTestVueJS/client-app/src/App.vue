@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <Home />
+    <AboutCard />
+    <TodayCard />
+    <RouterView />
   </div>
 </template>
 
 <script>
-import Home from "@/views/Home.vue";
+import AboutCard from "@/components/AboutCard.vue";
+import TodayCard from "@/components/TodayCard.vue";
 
 export default {
   name: "App",
-  components: {
-    Home,
-  },
+  components: { TodayCard, AboutCard },
 };
 </script>
 

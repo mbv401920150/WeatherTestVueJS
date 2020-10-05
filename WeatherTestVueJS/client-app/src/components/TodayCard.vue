@@ -1,8 +1,8 @@
 <template>
-  <h3>
-    <header>Today</header>
+  <header>
+    <h3>Today</h3>
     {{ getToday }}
-  </h3>
+  </header>
 </template>
 
 <script>
@@ -18,21 +18,22 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  text-align: center;
-  text-decoration: underline;
-  margin-bottom: 5px;
-}
-
-h3 {
   background: white;
   position: absolute;
-  top: 10px;
+  top: 110px;
+  width: 120px;
   right: 10px;
-  font-size: 1rem;
   border: 2px solid grey;
   border-radius: 5px;
   padding: 5px;
   cursor: help;
   box-shadow: 0 0 2px;
+  text-align: center;
+}
+
+h3 {
+  text-decoration: underline;
+  margin-bottom: 5px;
+  font-size: 1rem;
 }
 </style>

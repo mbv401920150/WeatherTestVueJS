@@ -18,14 +18,14 @@ export default new Vuex.Store({
       "Honolulu,HI,US",
     ],
     forecasts: [],
+    isAboutPage: false,
   },
   mutations: {
     addForecast(state, newEntry) {
       const { id } = newEntry;
 
       if (state.forecasts.findIndex((x) => x.id === id) >= 0) {
-        alert("The element already exists");
-        return;
+        throw "duplicate value";
       }
 
       state.forecasts.push(newEntry);
@@ -34,6 +34,11 @@ export default new Vuex.Store({
       const newForecasts = state.forecasts.filter((f) => f.id !== id);
 
       state.forecasts = newForecasts;
+    },
+    checkAboutPage(state, update) {
+      if (update !== undefined) {
+        state.isAboutPage = update;
+      } else state.isAboutPage = window.location.href.search("about") >= 0;
     },
   },
   actions: {},

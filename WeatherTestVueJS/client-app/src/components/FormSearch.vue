@@ -1,5 +1,5 @@
 <template>
-  <fragment>
+  <content>
     <form @submit.prevent="searchLocation">
       <section>
         <h3>Search a new location</h3>
@@ -45,19 +45,26 @@
         <input id="btnSubmit" type="submit" />
       </section>
     </form>
-  </fragment>
+
+    <ModalError ref="modalError" :message="errorType" />
+  </content>
 </template>
 
 <script>
 import ForecastWeather from "@/services/ForecastWeather.js";
+import ModalError from "@/components/ModalError";
 
 export default {
   name: "FormSearch",
+  components: {
+    ModalError,
+  },
   data: () => ({
     newLocation: "",
     zipCode: "",
     tempUnits: "F",
     showError: false,
+    errorType: "",
   }),
   computed: {
     getDefaultLocations() {
@@ -82,9 +89,21 @@ export default {
         units: this.tempUnits,
       };
 
+      this.errorType = "";
+
       ForecastWeather.get(payload)
-        .then(({ data }) => this.$store.commit("addForecast", { ...data }))
-        .catch(() => alert(`Something goes wrong with the request`));
+        .then(({ data }) => {
+          try {
+            this.$store.commit("addForecast", { ...data });
+          } catch {
+            this.errorType = "duplicate";
+            this.$refs.modalError.openModal();
+          }
+        })
+        .catch(() => {
+          this.errorType = "error";
+          this.$refs.modalError.openModal();
+        });
 
       this.newLocation = "";
       this.zipCode = "";
