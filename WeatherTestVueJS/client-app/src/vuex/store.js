@@ -35,11 +35,6 @@ export default new Vuex.Store({
 
       state.forecasts = newForecasts;
     },
-    checkAboutPage(state, update) {
-      if (update !== undefined) {
-        state.isAboutPage = update;
-      } else state.isAboutPage = window.location.href.search("about") >= 0;
-    },
   },
   actions: {},
 });

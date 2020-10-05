@@ -109,21 +109,21 @@ namespace WeatherTestVueJS.Logic
                     // The SELECT return the date, the average temp, and if exists or not chance of precipitation
                     // TAKE will only return the first 5 days
                     var stats = weatherResult
-                        .list
-                        .OrderBy(measure => measure.date)
-                        .Where(measure => measure.date >= DateTime.Today.AddDays(1))
-                        .GroupBy(measure => measure.date.ToString("MM/dd/yyyy"))
+                        .List
+                        .OrderBy(measure => measure.Date)
+                        .Where(measure => measure.Date >= DateTime.Today.AddDays(1))
+                        .GroupBy(measure => measure.Date.ToString("MM/dd/yyyy"))
                         .Select(daily => new CityWeatherPerDay()
                         {
                             Date = daily.Key,
-                            AverageTemp = Math.Round(daily.Average(m => m.main.temp_average), 2).ToString("#0.00"),
-                            ChanceOfPrecipitation = daily.Average(m => m.pop) > 0
+                            AverageTemp = Math.Round(daily.Average(m => m.Main.TempAverage), 2).ToString("#0.00"),
+                            ChanceOfPrecipitation = daily.Average(m => m.Pop) > 0
                         })
                         .Take(5);
 
                     // In the API Data there is not a prop to work as ID (I combined the coords - Lat and Lon)
-                    result.Id = weatherResult.city.coord.lat.ToString() + weatherResult.city.coord.lon.ToString(); 
-                    result.Location = weatherResult.city.name + ", " + weatherResult.city.country; // Beautify the string for final display
+                    result.Id = weatherResult.City.Coord.Lat.ToString() + weatherResult.City.Coord.Lon.ToString(); 
+                    result.Location = weatherResult.City.Name + ", " + weatherResult.City.Country; // Beautify the string for final display
                     result.Units = request.units; // Return the Temperature Units (C, F, K)
                     result.WeatherStats.AddRange(stats); // Add 5 days
                     result.ZipCode = request.zipCode;

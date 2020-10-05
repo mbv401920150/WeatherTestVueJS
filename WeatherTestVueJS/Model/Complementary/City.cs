@@ -7,13 +7,13 @@ namespace WeatherTestVueJS.Model
 {
     public class City
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public Coord coord { get; set; }
-        public string country { get; set; }
-        public double population { get; set; }
-        public int timezone { get; set; }
-        public double sunrise { get; set; }
-        public double sunset { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public Coord Coord { get; set; }
+        public string Country { get; set; }
+        public double Population { get; set; }
+        public int Timezone { get; set; }
+        public double Sunrise { get; set; }
+        public double Sunset { get; set; }
     }
 }

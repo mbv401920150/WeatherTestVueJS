@@ -7,7 +7,7 @@ namespace WeatherTestVueJS.Model
 {
     public class Coord
     {
-        public float lat { get; set; }
-        public float lon { get; set; }
+        public float Lat { get; set; }
+        public float Lon { get; set; }
     }
 }

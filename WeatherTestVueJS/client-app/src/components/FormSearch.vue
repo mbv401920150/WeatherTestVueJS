@@ -10,7 +10,7 @@
           <input
             id="new-location"
             list="list-locations"
-            placeholder="Location (City, City code, Country)"
+            placeholder="Location (City, State, Country)"
             v-model="newLocation"
             @keydown="removeError"
             @change="removeError"
@@ -42,7 +42,7 @@
           </div>
         </div>
 
-        <input id="btnSubmit" type="submit" />
+        <input id="btnSubmit" type="submit" value="Search" />
       </section>
     </form>
 

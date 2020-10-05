@@ -19,6 +19,7 @@ namespace WeatherTestVueJS.Controllers
             _mediator = mediator;
         }
 
+        [ApiVersion("1.0")]
         [HttpGet]
         public async Task<ActionResult<CityWeather>> getForecast([FromQuery] GetWeatherForecast.Request request)
         {

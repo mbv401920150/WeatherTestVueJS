@@ -7,6 +7,6 @@ namespace WeatherTestVueJS.Model
 {
     public class Clouds
     {
-        public int id { get; set; }
+        public int Id { get; set; }
     }
 }

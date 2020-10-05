@@ -1,22 +1,14 @@
 <template>
   <header>
     <h6>Menu</h6>
-    <RouterLink to="/"><div>Return Home</div></RouterLink>
-    <RouterLink to="/about"><div>Go to About</div></RouterLink>
+    <RouterLink to="/"><div>Home</div></RouterLink>
+    <RouterLink to="/about"><div>About</div></RouterLink>
   </header>
 </template>
 
 <script>
 export default {
-  name: "About",
-  mounted() {
-    this.$store.commit("checkAboutPage");
-  },
-  methods: {
-    validate(val) {
-      this.$store.commit("checkAboutPage", val);
-    },
-  },
+  name: "AboutCard",
   computed: {
     isAboutPage() {
       return this.$store.state.isAboutPage;

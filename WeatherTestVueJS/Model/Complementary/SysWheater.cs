@@ -7,6 +7,6 @@ namespace WeatherTestVueJS.Model
 {
     public class SysWheater
     {
-        public string pod { get; set; }
+        public string Pod { get; set; }
     }
 }

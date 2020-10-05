@@ -7,11 +7,12 @@
 </template>
 
 <script>
-import HeaderApp from "@/components/HeaderApp.vue";
-import FormSearch from "@/components/FormSearch.vue";
-import ListForecast from "@/components/ListForecast.vue";
+import HeaderApp from "@/components/HeaderApp";
+import FormSearch from "@/components/FormSearch";
+import ListForecast from "@/components/ListForecast";
 
 export default {
+  name: "Home",
   components: { HeaderApp, FormSearch, ListForecast },
 };
 </script>

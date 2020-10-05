@@ -11,10 +11,10 @@ namespace WeatherTestVueJS.Model
     /// </summary>
     public class WeatherResult
     {
-        public string cod { get; set; }
-        public int message { get; set; }
-        public int cnt { get; set; }
-        public List<WheaterEntry> list { get; set; }
-        public City city { get; set; }
+        public string Cod { get; set; }
+        public int Message { get; set; }
+        public int Cnt { get; set; }
+        public List<WheaterEntry> List { get; set; }
+        public City City { get; set; }
     }
 }

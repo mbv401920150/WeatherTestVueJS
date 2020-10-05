@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import AboutCard from "@/components/AboutCard.vue";
-import TodayCard from "@/components/TodayCard.vue";
+import AboutCard from "@/components/AboutCard";
+import TodayCard from "@/components/TodayCard";
 
 export default {
   name: "App",

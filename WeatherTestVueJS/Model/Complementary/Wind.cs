@@ -7,7 +7,7 @@ namespace WeatherTestVueJS.Model
 {
     public class Wind
     {
-        public float speed { get; set; }
-        public float deg { get; set; }
+        public float Speed { get; set; }
+        public float Deg { get; set; }
     }
 }

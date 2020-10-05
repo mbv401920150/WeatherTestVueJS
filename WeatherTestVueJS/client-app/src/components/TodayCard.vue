@@ -29,11 +29,11 @@ header {
   cursor: help;
   box-shadow: 0 0 2px;
   text-align: center;
-}
 
-h3 {
-  text-decoration: underline;
-  margin-bottom: 5px;
-  font-size: 1rem;
+  h3 {
+    text-decoration: underline;
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
 }
 </style>
