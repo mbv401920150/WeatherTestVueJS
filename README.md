@@ -42,6 +42,39 @@ Date       Avg Temp(F)
 
 # Version History
 
+## Version 6
+
+<details>
+  
+New features
+- Included multiples way to find a location:
+	- Country + ZIP Code (The most accurate)
+	- City + Country
+	- Just a representative word like (England, Madrid, Heredia)
+
+- The display name in the table will take the location from the API.
+- If the user includes the Zip Code, then, will be included into the information.
+- Includes the option to change the Temp Units (C, F, K)
+
+Styles:
+- The interface shows at center of the screen.
+- Additional background pattern was included.
+- Today card is display at top-right (Just to reference).
+- Was changed the form interface to make smaller (To maximize the total size of the screen)
+- Multiples changes in the Styles.
+
+Fixes:
+- In the backend, the ID uses the coords (Lat + Lon). Due to the API result doesn't has a real ID
+
+Backend changes:
+- Allow send Zip Code and the Temp Units.
+- Multiples fixes and small other changes.
+
+### Demo
+![version6](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/724e7ed1-526c-4464-9e95-43c77d09dafb/Version_6.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201004T025016Z&X-Amz-Expires=86400&X-Amz-Signature=174f7c8f2314fa219644b4af366ffcbe8773985be5c05d81f89eba11bf6402b8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Version_6.gif%22)
+
+</details>
+
 ## Version 5
 
 <details>
